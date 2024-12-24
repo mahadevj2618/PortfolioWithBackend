@@ -17,5 +17,5 @@ A personal portfolio website showcasing my projects, skills, and experience as a
 - **Frontend**: HTML, CSS, Bootstrap
 - **Database**: SQLite (default Django DB)
 
-![Screenshot 2024-12-24 184433](https://github.com/user-attachments/assets/93dfdc67-e4b7-43eb-9568-801822d2b8c9)
 
+![Screenshot 2024-12-24 195052](https://github.com/user-attachments/assets/3a1a2aed-8445-4f3f-a37f-462f05e2b721)
