@@ -19,3 +19,4 @@ A personal portfolio website showcasing my projects, skills, and experience as a
 
 
 ![Screenshot 2024-12-24 195052](https://github.com/user-attachments/assets/3a1a2aed-8445-4f3f-a37f-462f05e2b721)
+![Screenshot 2024-12-24 195723](https://github.com/user-attachments/assets/2146086f-44b9-409b-a237-e9b3af915844)
