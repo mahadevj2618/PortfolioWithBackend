@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Portfolio</title>
+</head>
+<body>
+    <h1>Welcome to My Portfolio</h1>
+
+    <section id="about" style="margin: 20px; padding: 20px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+            <!-- About Section -->
+            <div style="width: 60%; padding: 20px;">
+                <h2>About</h2>
+                <p>
+                    I am eager to begin my career in software development after completing my MCA postgraduate degree. 
+                    Proficient in computer applications, with a solid foundation in front-end and back-end technologies, 
+                    including HTML, CSS, JavaScript, I am well-equipped to contribute to innovative projects and solutions. 
+                    During my academic journey, I immersed myself in various projects and coursework that honed my technical 
+                    skills and problem-solving abilities.
+                </p>
+                <p>
+                    I thrived in collaborative environments and leveraged my creativity to develop intuitive user interfaces 
+                    and efficient backend systems. My passion for learning and exploring new technologies drives me to stay 
+                    updated with industry trends and best practices. I am particularly interested in opportunities that allow 
+                    me to work on cross-functional teams and tackle diverse challenges.
+                </p>
+                <p>
+                    I am excited about the prospect of contributing to the development of scalable web applications that 
+                    deliver exceptional user experiences. As a proactive and adaptable individual, I am ready to embrace 
+                    new challenges and make meaningful contributions to the success of your organization.
+                </p>
+            </div>
+            <!-- Basic Information -->
+            <div style="width: 35%; padding: 20px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+                <h3>Basic Information</h3>
+                <p><strong>NAME:</strong> Mahadev Jelugadekar</p>
+                <p><strong>AGE:</strong> 24</p>
+                <p><strong>EMAIL:</strong> mahadevj2618@gmail.com</p>
+                <p><strong>PHONE:</strong> +91-7022109329</p>
+                <p><strong>ADDRESS:</strong> Belagavi, Karnataka</p>
+                <p><strong>LANGUAGE:</strong> Marathi, English, Kannada, Hindi</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="projects-section py-5 bg-light">
+        <div class="container">
+            <h1 class="text-center mb-4">Projects</h1>
+            <div class="row g-4">
+                {% for project in projects %}
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm h-100">
+                            <div class="card-body">
+                                <h2 class="card-title">{{ project.title }}</h2>
+                                <p class="card-text">{{ project.description }}</p>
+                                <img src="{{ project.image.url }}" alt="{{ project.title }}" width="150" height="150">
+                                <div class="d-flex justify-content-between">
+                                    <a href="{{ project.live_link }}" target="_blank" class="btn btn-primary btn-sm">Live Demo</a>
+                                    <a href="{{ project.source_code }}" target="_blank" class="btn btn-secondary btn-sm">Source Code</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+        <h2>Blog</h2>
+        <ul>
+            {% for post in blog_posts %}
+                <li>
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.content|slice:":100" }}...</p>
+                    <a href="/blog/">Read More</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </section>
+</body>
+</html>

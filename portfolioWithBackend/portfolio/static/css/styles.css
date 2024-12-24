@@ -1,0 +1,32 @@
+#about {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+#about h2, #about h3 {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#about p {
+    line-height: 1.6;
+    color: #34495e;
+}
+
+#about div {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+#about .basic-info p {
+    margin-bottom: 10px;
+}
+
+#about .basic-info p strong {
+    color: #27ae60;
+}
+
+
+
